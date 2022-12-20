@@ -8,6 +8,11 @@ import java.security.MessageDigest
 fun readInput(name: String) = File("src", "$name.txt")
     .readLines()
 
+/**
+ * Reads text from the given input txt file.
+ */
+fun readInputAsText(name: String) = File("src", "$name.txt").readText()
+
 fun parse(input: List<String>): MutableList<List<Int>> {
     val parsedInput = mutableListOf<List<Int>>()
     var current = mutableListOf<Int>()
